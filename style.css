@@ -41,6 +41,73 @@ nav div a:hover{
 }
 
 
+#navMobile{
+    background-color: #FBFBFB;
+    display: none;
+    z-index: 1;
+    border: 3px double black;
+    border-top: none;
+    border-bottom: none;
+}
+
+#navMobile div{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#navMobile div:first-child div:first-child a img{
+    transition: .5s;
+}
+
+#navMobile div:last-child div:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 55%;
+}
+
+
+#navMobile div:last-child div:last-child{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    height: 100%;
+}
+
+#navMobile div:last-child div:last-child div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-right: 5%;
+    width: 30px;
+    height: 30px;
+
+}
+
+
+#navMobile div:last-child div span{
+    margin-left: -5%;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+}
+
+.spanTopo{
+    transition: .25s;
+}
+
+.spanMeio{
+    transition: .25s;
+}
+
+.spanBase{
+    transition: .25s;
+}
+
 header{
     grid-area: hd;
     display: flex;
@@ -138,3 +205,60 @@ footer{
     grid-area: ftr;
     background-color: black;
 }
+
+.patoHover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+@media(max-width: 768px){
+    body{
+        display: grid;
+        grid-template-areas: "nv" "nv2" "hd" "sc" "art" "ftr";
+        grid-template-rows:  10vh 0.1vh 75vh 15vh 120vh 20vh;
+        grid-template-columns: 100vw;
+    }
+    
+
+    #navMobile{
+        grid-area: nv;
+        display: flex;
+        border-bottom: 3px double black;
+    }
+
+    
+    nav{
+        grid-area: nv2;
+        display:none;
+        height: 30vh;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-30vh);
+        transition: .25s;
+    }
+
+
+    .meioSome{
+        transform: translateX(-50px);
+        opacity: 0;
+        z-index: -1;
+    }
+
+    .topoXis{
+        transform: translateY(10px) rotate(-225deg);
+    }
+
+    .baseXis{
+        transform: translateY(-10px) rotate(225deg);
+    }
+
+    .quack{
+        transform: rotateZ(-360deg);
+    }
+
+    .desceDai{
+        display:flex;
+        transform: translateY(0);
+    }
