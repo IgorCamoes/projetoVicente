@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-areas: ". nv ." ". hd ." ". sc ." ". art ." "ftr ftr ftr";
+    grid-template-columns: 4.3vw 90vw 4.3vw;
+    grid-template-rows: 10vh 75vh 15vh 120vh 20vh; 
+    background-image: url("img/bodybg.png");
+}
+
+nav{
+    grid-area: nv;
+    background-color: #FBFBFB;
+    display: flex;
+    z-index: 1;
+    border: 3px double black;
+    border-top: none;
+    border-bottom: 2px double black;
+}
+
+nav div{
+    width: 34%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav div h3{
+    margin: 0;
+    font-family: 'Carter One', cursive;
+    color: black;
+}
+
+nav div a{
+    text-decoration: none;
+    text-emphasis: none;
+}
+
+nav div a:hover{
+    text-shadow: 2px 2px #AEAEAE;
+}
+
+
+header{
+    grid-area: hd;
+    display: flex;
+    background-color: white;
+    background-image: url("img/headerbg.png");
+}
+
+header div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+
+header div:first-child{
+    justify-content: flex-start;
+    align-items: flex-end; 
+}
+
+header div:first-child .divNome{
+    width: 60%;
+    height: 20%;
+    background-color: rgb(224, 224, 224); 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10% 0 0;
+    margin: 0 0 5% 0;
+    box-shadow: -20px 20px #888888ab;
+}
+
+header div .divNome h4{
+    margin: 0;
+    font-size: 26pt;
+    font-family: 'Amatic SC', cursive;
+}
+
+header div:last-child{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header div:last-child .divFrase{
+    width: 70%;
+    height: 60%;
+    background-color: rgb(224, 224, 224);
+    box-shadow: 40px 40px #888888ab;
+    align-items: center;
+    border-radius: 30%;
+    text-align: center;
+}
+
+header div:last-child .divFrase h4{
+    font-size: 46pt;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 600;
+    /* text-shadow: 5px 5px #88888869 */
+}
+.botoesPato{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.patos{
+    
+    color: white;
+    font-size: 32pt;
+    font-family: 'Amatic SC', cursive;
+    
+}
+
+section{
+    grid-area: sc;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+
+article{
+    grid-area: art;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    grid-area: ftr;
+    background-color: black;
+}
